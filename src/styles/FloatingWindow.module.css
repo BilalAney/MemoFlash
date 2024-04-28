@@ -1,0 +1,18 @@
+/** @format */
+
+.window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--forth-color);
+  padding: 2.4rem;
+  position: fixed;
+  top: 30%;
+  right: 0;
+  left: 0;
+  max-width: 40vw;
+  border-radius: 8px;
+  margin: auto;
+}

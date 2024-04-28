@@ -1,0 +1,43 @@
+/** @format */
+
+.spinner {
+  height: 60px;
+  width: 60px;
+  border-radius: 26px;
+  border: 3px dotted white;
+  animation: rolling-effect;
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spinnerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rolling-effect {
+  0% {
+    border: 3px dotted black;
+    rotate: 0deg;
+  }
+  25% {
+    border: 2px dotted black;
+    rotate: 90deg;
+  }
+  50% {
+    border: 1px dotted black;
+    rotate: 180deg;
+  }
+  75% {
+    border: 2px dotted black;
+    rotate: 270deg;
+  }
+  100% {
+    border: 3px dotted black;
+    rotate: 360deg;
+  }
+}

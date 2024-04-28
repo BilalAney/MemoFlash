@@ -1,0 +1,61 @@
+/** @format */
+
+.collectionPartContainer {
+  width: 100%;
+  height: inherit;
+  padding: 5px;
+  background-color: transparent;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.infoBar {
+  width: inherit;
+  height: auto;
+  padding: 15px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  background-color: var(--first-color);
+}
+
+.collectionName {
+  font-size: var(--lvl-one-text);
+  letter-spacing: 0.5rem;
+  align-self: center;
+}
+
+.infoBarDataContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  align-items: start;
+  justify-content: center;
+  gap: auto;
+  width: fit-content;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+  /* grid-template-rows: repeat(auto-fill, 1fr); */
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 1.2rem;
+  margin: 1rem;
+  max-width: max-content;
+  height: auto;
+  max-height: 120px;
+  background-color: var(--forth-color);
+  grid-row: span 1;
+  text-align: center;
+  overflow: auto;
+}
+
+.card span {
+  letter-spacing: 5px;
+}

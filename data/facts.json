@@ -1,0 +1,49 @@
+{
+  "facts": [
+    {
+      "id": 0,
+      "questionPart": "DID YOU KNOW?",
+      "factPart": `When you use flashcards to memorize things, you will be rich, have six packs, and become incredibly strong! Try it and see YOURSELF!`
+    },
+    {
+      "id": 1,
+      "questionPart": "FUNNY FACT",
+      "factPart": `When you lose the chance to try my app, you will be a loser person. When you willingly don't use my app, you have lost your ambition. Go and login now and see YOURSELF!`
+    },
+    {
+      "id": 2,
+      "questionPart": "VALUABLE ADVICE",
+      "factPart": `Don't waste your time learning how to do things, instead DO THE THINGS YOURSELF! Login now and see YOURSELF!`
+    },
+    {
+      "id": 3,
+      "questionPart": "SURPRISING FACT",
+      "factPart": `Did you know that eating chocolate while coding can increase your productivity by 999%? Try it out now and see the magic happen! Try and see YOURSELF!`
+    },
+    {
+      "id": 4,
+      "questionPart": "INTERESTING FACT",
+      "factPart": `Research shows that listening to classical music while debugging can help you find bugs faster. Give it a try and become a debugging maestro! Try and see YOURSELF!`
+    },
+    {
+      "id": 5,
+      "questionPart": "MIND-BLOWING FACT",
+      "factPart": `Scientists have discovered that staring at the color blue for 10 minutes every day can boost your creativity. Dive into our app now and unleash your inner artist! Try and see YOURSELF!`
+    },
+    {
+      "id": 6,
+      "questionPart": "AMAZING DISCOVERY",
+      "factPart": `Recent studies indicate that drinking water upside down can increase your IQ by 50 points. Try it today and become a genius! Try and see YOURSELF!`
+    },
+    {
+      "id": 7,
+      "questionPart": "UNBELIEVABLE TRUTH",
+      "factPart": `Believe it or not, watching cat videos for an hour a day can improve your problem-solving skills. Embrace the cuteness and level up your brainpower! Try and see YOURSELF!`
+    },
+    {
+      "id": 8,
+      "questionPart": "SHOCKING REVELATION",
+      "factPart": `You'll be amazed to learn that smelling rosemary can enhance your memory by 75%. Inhale the scent of success and unlock your full potential! Try and see YOURSELF!`
+    }
+  ]
+}

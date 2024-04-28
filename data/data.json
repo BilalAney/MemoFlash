@@ -1,0 +1,58 @@
+{
+  "collections": [
+    {
+      "id": "12xi3",
+      "name": "English Cards",
+      "cards": [
+        {
+          "collectionId": "12xi3",
+          "cardId": "xi31",
+          "front": "Hello",
+          "back": "مرحبا"
+        }
+      ]
+    },
+    {
+      "id": "gen-45jk",
+      "name": "Math Formulas",
+      "cards": [
+        {
+          "collectionId": "gen-45jk",
+          "cardId": "jk12",
+          "front": "A + B = C",
+          "back": "The sum of A and B equals C"
+        },
+        {
+          "collectionId": "gen-45jk",
+          "cardId": "jk34",
+          "front": "x^2 + y^2 = z^2",
+          "back": "Pythagorean Theorem"
+        },
+        {
+          "collectionId": "gen-45jk",
+          "cardId": "jk56",
+          "front": "3.14...",
+          "back": "Pi (ratio of a circle's circumference to its diameter)"
+        }
+      ]
+    },
+    {
+      "id": "col-78ab",
+      "name": "Science Facts",
+      "cards": [
+        {
+          "collectionId": "col-78ab",
+          "cardId": "ab19",
+          "front": "Water freezes at 0°C",
+          "back": "The freezing point of water"
+        },
+        {
+          "collectionId": "col-78ab",
+          "cardId": "ab20",
+          "front": "The sun is a star",
+          "back": "A giant ball of hot gas at the center of our solar system"
+        }
+      ]
+    }
+  ]
+}

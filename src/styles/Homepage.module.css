@@ -1,0 +1,149 @@
+/** @format */
+
+.Homepage {
+  display: grid;
+  grid-template-columns: 1fr 30vw;
+  width: 100%;
+  height: 100%;
+}
+
+.leftSection {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* background-image: url("../assets/bgs/bg1.jpg") !important; */
+}
+
+.factBox {
+  color: black;
+  background-color: whitesmoke;
+  padding: 15px;
+  position: absolute;
+  top: 33.333333%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50%;
+  border-radius: 12px;
+  border: 1px solid black;
+}
+
+.rightSection {
+  height: 100%;
+  width: 100%;
+  padding: 12px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid cyan;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding: 15px;
+  color: #000;
+}
+
+.outerTitle {
+  align-self: center;
+  color: var(--first-color);
+}
+
+.innerTitle {
+  color: var(--third-color);
+}
+
+.rightSection img {
+  align-self: center;
+  width: 30%;
+}
+
+.rightSection footer {
+  color: #000;
+  letter-spacing: 2px;
+  font-size: x-small;
+  margin-top: auto;
+}
+
+.loginForm input {
+  caret-color: green;
+}
+
+.middleBar {
+  color: #000;
+}
+
+.middleBar::before,
+.middleBar::after {
+  content: "";
+  width: 100%;
+  /* height: 1rem; */
+  /* color: #000; */
+  display: block;
+  background-color: var(--second-color);
+  height: 1px;
+}
+
+.btnsCtn {
+  align-self: center;
+  align-items: center;
+  display: flex;
+}
+
+.submitBtn,
+.goToSignBtn {
+  padding: 8px 20px 8px 20px !important;
+  letter-spacing: 5px;
+  border: 1px solid var(--first-color);
+}
+
+.goToSignBtn {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.goToSignBtn:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* This fieldset (.genderBox) is for choosing the gender in the signup form not in the login form */
+.genderBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1.3rem;
+}
+
+.linkMethods {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-around;
+  margin: 8px;
+}
+
+.linkMethods img {
+  width: 2.5rem;
+  border-radius: 12px;
+  transition: all 0.15s;
+  padding: 4px;
+}
+
+.linkMethods img:hover {
+  background-color: #242424;
+  cursor: pointer;
+}
+
+.linkMethods img:active {
+  opacity: 0.8;
+}
+
+@media screen and (width < 700px) {
+}

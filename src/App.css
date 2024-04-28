@@ -1,0 +1,59 @@
+/** @format */
+.App {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.679);
+  opacity: 0.5;
+}
+
+.lvlOneText {
+  font-size: 1.5rem;
+}
+
+.lvlTwoText {
+  font-size: 1rem;
+}
+
+.lvlThreeText {
+  font-size: 0.8rem;
+}
+
+.btn {
+  padding: 7px;
+  margin: 2px;
+  background-color: var(--first-color);
+  border: none;
+  border-radius: 8px;
+  max-width: max-content;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  /* margin-bottom: 5px; */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  color: #000;
+}
+
+[type="password"]::-ms-reveal {
+  display: none !important;
+}

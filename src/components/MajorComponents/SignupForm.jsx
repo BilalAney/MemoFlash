@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 export default function SignupForm() {
   const navigate = useNavigate();
   return (
-    <form className={styles.loginForm}>
+    <form className={styles.loginForm} onSubmit={(e) => e.preventDefault()}>
       <h3>
         CREATE YOUR <span className={styles.innerTitle}>BRILLIANT</span> ACCOUNT
       </h3>

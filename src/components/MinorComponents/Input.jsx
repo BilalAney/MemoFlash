@@ -10,7 +10,7 @@ export default function Input({
   name,
   display = "flex",
   flexDirection = "row",
-  padding = "4px",
+  padding = "8px 2px 8px 2px",
   justifyContent = "space-between",
   alignItems = "center",
   width = "80%",

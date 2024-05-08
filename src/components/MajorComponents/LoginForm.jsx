@@ -68,7 +68,12 @@ export default function LoginForm() {
       </Input>
       <p>Don&apos;t remember password?! click here</p>
       <div className={styles.btnsCtn}>
-        <button className={`${styles.submitBtn} btn`}>LOGIN</button>
+        <button
+          className={`${styles.submitBtn} btn`}
+          onClick={() => navigate("/app")}
+        >
+          LOGIN
+        </button>
         <button
           className={`${styles.goToSignBtn} btn`}
           onClick={() => navigate("signup")}

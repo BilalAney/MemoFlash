@@ -18,6 +18,12 @@ import Homepage from "./Pages/Homepage";
 import NewCollectionForm from "./components/MajorComponents/NewCollectionForm";
 import SignupForm from "./components/MajorComponents/SignupForm";
 import LoginForm from "./components/MajorComponents/LoginForm";
+import NewCardForm from "./components/MajorComponents/NewCardForm";
+import EditCardForm from "./components/MajorComponents/EditCardForm";
+import DialogBox from "./components/MinorComponents/DialogBox";
+import DeleteDialog from "./components/MinorComponents/DeleteDialog";
+import InfoBox from "./components/MinorComponents/InfoBox";
+import AccountSettings from "./components/MinorComponents/AccountSettings";
 
 function App() {
   return (
@@ -29,6 +35,11 @@ function App() {
         </Route>
         <Route path="App" element={<Application />}>
           <Route path="NewCollection" element={<NewCollectionForm />} />
+          <Route path="NewCard/:name" element={<NewCardForm />} />
+          <Route path="EditCard" element={<EditCardForm />} />
+          <Route path="DeleteDialog" element={<DeleteDialog />} />
+          <Route path="About" element={<InfoBox />} />
+          <Route path="Account" element={<AccountSettings />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

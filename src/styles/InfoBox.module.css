@@ -1,0 +1,64 @@
+/** @format */
+.window {
+  max-width: 60vw;
+  top: 20%;
+  padding-top: 9%;
+}
+
+.imgCtn {
+  position: absolute;
+  top: -15%;
+}
+
+.window h3::before,
+.window h3::after {
+  content: "";
+  width: auto;
+  background-color: #000;
+  display: block;
+  height: 3px;
+}
+.linkMethods {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+.linkMethods img {
+  width: 2.5rem;
+  border-radius: 12px;
+  transition: all 0.15s;
+  padding: 4px;
+}
+
+.linkMethods img:hover {
+  background-color: #242424;
+  cursor: pointer;
+}
+
+.linkMethods img:active {
+  opacity: 0.8;
+}
+
+.window img.bilal {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 6rem;
+  object-fit: cover;
+  align-self: start;
+}
+.window img.logo {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 6rem;
+  object-fit: cover;
+  overflow: visible;
+}
+
+.window p {
+  float: right;
+}
+
+.window h1 {
+  letter-spacing: 3px;
+  color: #000;
+}

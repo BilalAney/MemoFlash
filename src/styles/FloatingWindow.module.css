@@ -15,4 +15,5 @@
   max-width: 40vw;
   border-radius: 8px;
   margin: auto;
+  z-index: 1000;
 }

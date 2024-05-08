@@ -1,0 +1,31 @@
+/** @format */
+
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 7px;
+  position: absolute;
+  right: 3px;
+  bottom: 0;
+  z-index: 1000;
+  width: max-content;
+  height: max-content;
+  border-radius: 7px;
+  background-color: var(--second-color);
+}
+
+.menuContainer li {
+  list-style: none;
+  padding: 7px;
+  margin: 1px;
+  border-bottom: 1px solid grey;
+  transition: all 0.15s;
+  border-radius: 7px;
+}
+
+.menuContainer li:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  color: #000;
+}

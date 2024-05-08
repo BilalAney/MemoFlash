@@ -1,0 +1,113 @@
+/** @format */
+
+.window {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  padding: 8px;
+  max-width: 60vw;
+  top: 25%;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: var(--fifth-color);
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  height: 100%;
+}
+
+.leftSection img {
+  width: 80%;
+  align-self: center;
+}
+
+.leftSection ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: auto;
+  padding: 6px;
+  list-style: none;
+}
+
+.menuItem {
+  padding: 4px;
+  display: grid;
+  grid-template-columns: fit-content 1fr;
+  border: 1px solid var(--third-color);
+  border-radius: 4px;
+  color: #000;
+  transition: all 0.15s;
+}
+
+.selected {
+  background-color: var(--forth-color);
+}
+
+.menuItem:hover {
+  background-color: #424242;
+  cursor: pointer;
+  color: var(--forth-color);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.profile_title {
+  align-self: start;
+}
+
+.profile_upperSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+  padding: 4px 20px;
+  background-color: #424242;
+  border-radius: 6px;
+}
+
+.profile_lowerSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+  gap: 4px;
+  padding: 6px;
+}
+
+.profile_upperSection_buttons,
+.profile_lowerSection_buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.changePassBox {
+  padding: 8px;
+  margin: 4px;
+}
+
+.changePassBox form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, auto));
+  gap: 8px;
+}
+
+.phoneNumberBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+}

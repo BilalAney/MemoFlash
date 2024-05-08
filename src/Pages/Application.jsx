@@ -37,7 +37,7 @@ export default function Application() {
         <Logo />
         <BurgerMenu />
       </Header>
-      <SidebarControlBar closeSidebar={setIsSidebarOpen} />
+      {/* <SidebarControlBar closeSidebar={setIsSidebarOpen} /> */}
       {isSidebarOpen && (
         <Sidebar>
           <SidebarInfoBox

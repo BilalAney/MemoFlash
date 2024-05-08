@@ -57,3 +57,21 @@
 [type="password"]::-ms-reveal {
   display: none !important;
 }
+
+input {
+  text-indent: 3px;
+  background-color: auto;
+  border-radius: 7px;
+  border: none;
+  caret-color: green;
+  transition: all 0.15s;
+}
+
+input::placeholder {
+  color: rgb(116, 113, 113);
+}
+
+input:hover:not([type="radio"]) {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px, rgba(0, 0, 0, 0.22) 0px 8px 8px;
+  transform: translateY(-3px);
+}

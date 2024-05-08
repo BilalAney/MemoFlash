@@ -12,6 +12,7 @@
   --second-color: #315c2b;
   --third-color: #274029;
   --forth-color: #b0b2b8;
+  --fifth-color: #d6d7db;
   --lvl-one-text: 1.5rem;
   --lvl-two-text: 1rem;
   --lvl-three-text: 0.8rem;
@@ -24,7 +25,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #666767;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

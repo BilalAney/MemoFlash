@@ -5,6 +5,7 @@
   padding: 4px;
   margin-left: auto;
   position: relative;
+  z-index: 1000;
 }
 
 .burgerMenuContainer img {

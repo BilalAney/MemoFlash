@@ -1,0 +1,11 @@
+/** @format */
+
+.newCardWindow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px !important;
+}
+
+.discardBtn {
+  background-color: var(--third-color);
+}

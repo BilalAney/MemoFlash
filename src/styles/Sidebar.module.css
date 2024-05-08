@@ -3,7 +3,7 @@
 .Sidebar {
   grid-column: 1;
   width: max-content;
-  height: inherit;
+  /* height: inherit; */
   display: flex;
   flex-direction: column;
   gap: 3%;
@@ -42,6 +42,7 @@
   border: none;
   border-radius: 8px;
   transition: all 0.15s;
+  position: relative;
 }
 .collectionItemContainer img {
   height: 100%;

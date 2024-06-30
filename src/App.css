@@ -34,6 +34,10 @@
   font-size: 0.8rem;
 }
 
+.noteText {
+  font-size: 0.6rem;
+}
+
 .btn {
   padding: 7px;
   margin: 2px;
@@ -74,4 +78,7 @@ input::placeholder {
 input:hover:not([type="radio"]) {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px, rgba(0, 0, 0, 0.22) 0px 8px 8px;
   transform: translateY(-3px);
+}
+
+@media (max-width: 1079px) {
 }

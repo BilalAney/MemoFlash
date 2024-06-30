@@ -3,7 +3,7 @@
 import FloatingWindow from "./FloatingWindow";
 import styles from "../../styles/AccountSettings.module.css";
 import logo from "../../assets/Logo512.png";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import avatar from "../../assets/interface_icons/Account_default_avater.svg";
 import Avatar from "./Avatar";
 import Input from "./Input";
@@ -162,15 +162,21 @@ function ProfileInfo_lowerSection({ firstName, lastName, email, dob }) {
 }
 
 function SecuritySettings() {
-  const [is2fa, setIs2fa] = useState(false);
+  const [toggles, setToggles] = useState({ is2fa: false, isAlert: false });
   return (
     <div className={styles.security}>
       <p className={`${styles.profile_title} lvlOneText`}>SECURITY</p>
       <hr />
-      <ToggleInput externalState={is2fa} setExternalState={setIs2fa}>
+      <ToggleInput
+        externalState={toggles.is2fa}
+        setExternalState={() =>
+          setToggles((pre) => ({ ...pre, is2fa: !pre.is2fa }))
+        }
+        className={styles.toggleComp}
+      >
         Two Factor Authentication(2FA)
       </ToggleInput>
-      {is2fa && (
+      {toggles.is2fa && (
         <fieldset className={styles.phoneNumberBox}>
           <legend>Phone number</legend>
           <Input disabled={true} width="40%" justifyContent="space-around">
@@ -179,6 +185,15 @@ function SecuritySettings() {
           <button className={`${styles.saveChangesbtn} btn`}>Change</button>
         </fieldset>
       )}
+      <ToggleInput
+        externalState={toggles.isAlert}
+        setExternalState={() =>
+          setToggles((pre) => ({ ...pre, isAlert: !pre.isAlert }))
+        }
+        className={styles.toggleComp}
+      >
+        Login alert
+      </ToggleInput>
       <fieldset className={styles.changePassBox}>
         <legend>Change the password</legend>
         <p>You can change it once in 15 days</p>
@@ -207,11 +222,109 @@ function SecuritySettings() {
           >
             Confirm new password:{" "}
           </Input>
+          <div className={styles.changePassbuttons}>
+            <button className={`${styles.changePassBtn} btn`}>
+              Change password
+            </button>
+            <button className={`${styles.forgotPassBtn} btn`}>
+              Forgot password?
+            </button>
+          </div>
         </form>
       </fieldset>
     </div>
   );
 }
-function PrivacySettings() {}
-function AccountPreferences() {}
-function HelpSupport() {}
+function PrivacySettings() {
+  return (
+    <div className={styles.privacy}>
+      <p className={`${styles.profile_title} lvlOneText`}>PRIVACY</p>
+      <hr />
+      <p>Read the privacy policy here</p>
+      <ToggleInput
+        className={styles.toggleComp}
+        externalState={true}
+        setExternalState={() => {}}
+      >
+        Collect my data for general improvements
+        <p className="noteText">
+          *We're collecting all data from all users currently. Unfortunately you
+          can not prevent this now for urgent needs to improve our service
+        </p>
+      </ToggleInput>
+      <ToggleInput
+        className={styles.toggleComp}
+        externalState={true}
+        setExternalState={() => {}}
+      >
+        Share my data with 3rd party entities
+        <p className="noteText">
+          *Currently, all back-end services are provided by 3rd party entity,
+          Unfortunately you're not allowed to prevent this, your data is shared
+          among YOU, US(Bilal Al-aney) and FIREBASE SERVICES
+        </p>
+      </ToggleInput>
+      <div className={styles.privacyButtons}>
+        <button className={`${styles.downloadDataBtn} btn`}>
+          Download your data
+        </button>
+        <button
+          className={`${styles.deleteAccountBtn} btn`}
+          title="🔴⚠️EXTREMELY DANGEROUS!! THE ACCOUNT WILL BE DELETED PERMENANTLY AFTER 7-DAYS, YOU CAN NOT RESTORE IT FOREVER! BE CAUTIOUS! "
+        >
+          DELETE ACCOUNT
+        </button>
+      </div>
+    </div>
+  );
+}
+function AccountPreferences() {
+  return (
+    <div className={styles.preferences}>
+      <p className={`${styles.profile_title} lvlOneText`}>
+        ACCOUNT PREFERENCES
+      </p>
+      <hr />
+      <label className={styles.languageSelectionBox}>
+        Language
+        <select>
+          <option>English</option>
+          <option>العربية</option>
+          <option>كوردى</option>
+        </select>
+      </label>
+      <ToggleInput
+        className={styles.toggleComp}
+        externalState={true}
+        setExternalState={() => {}}
+      >
+        Dark mode
+      </ToggleInput>
+      <div className={styles.preferencesButtons}>
+        <button className={`${styles.connectBtn} btn`}>Connect account</button>
+        <button className={`${styles.syncBtn} btn`}>
+          Sync to Google Drive
+        </button>
+      </div>
+    </div>
+  );
+}
+function HelpSupport() {
+  return (
+    <div className={styles.helpSupport}>
+      <p className={`${styles.profile_title} lvlOneText`}>HELP CENTER</p>
+      <hr />
+      <fieldset className={styles.changePassBox}>
+        <legend>FEEDBACK</legend>
+        <p>Your feedback matters. We evaluate your support...</p>
+        <textarea cols={35} rows={10} />
+        <button className={`${styles.sendFeedbackBtn} btn`}>SEND!!</button>
+      </fieldset>
+      <div className={styles.helpSupportButtons}>
+        <button className={`${styles.faqBtn} btn`}>FAQ</button>
+        <button className={`${styles.syncBtn} btn`}>Contact us!</button>
+      </div>
+      <footer>All rights reserved MemoFlash 2024</footer>
+    </div>
+  );
+}

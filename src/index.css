@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s;
 }
 
 :root {
@@ -11,7 +12,7 @@
   --first-color: #70e130;
   --second-color: #315c2b;
   --third-color: #274029;
-  --forth-color: #b0b2b8;
+  --forth-color: #545559;
   --fifth-color: #d6d7db;
   --lvl-one-text: 1.5rem;
   --lvl-two-text: 1rem;

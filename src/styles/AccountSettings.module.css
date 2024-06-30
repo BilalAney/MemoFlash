@@ -52,6 +52,10 @@
   color: var(--forth-color);
 }
 
+.rightSection {
+  height: 100%;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -85,11 +89,27 @@
 }
 
 .profile_upperSection_buttons,
-.profile_lowerSection_buttons {
+.profile_lowerSection_buttons,
+.changePassbuttons,
+.privacyButtons,
+.preferencesButtons,
+.helpSupportButtons {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+
+.security {
+  height: 100%;
+}
+
+.toggleComp,
+.languageSelectionBox {
+  margin: 2%;
+  display: grid !important;
+  grid-template-columns: 1fr auto;
+  padding: 4px 18px;
 }
 
 .changePassBox {
@@ -110,4 +130,51 @@
   align-items: center;
   padding: 8px;
   gap: 8px;
+}
+
+.privacy {
+  height: 100%;
+  margin-bottom: auto;
+}
+
+.deleteAccountBtn {
+  background-color: red;
+}
+
+.deleteAccountBtn:hover {
+  animation: HeartBeat;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes HeartBeat {
+  0% {
+    opacity: 0.8;
+    background-color: red;
+    scale: 1.1;
+  }
+  25% {
+    opacity: 0.6;
+    background-color: lightcoral;
+    color: #fff;
+  }
+  50% {
+    opacity: 0.4;
+    background-color: transparent;
+  }
+  75% {
+    opacity: 0.6;
+    background-color: lightcoral;
+    scale: 1;
+  }
+  100% {
+    opacity: 0.8;
+    color: #000;
+    background-color: red;
+  }
+}
+
+.languageSelectionBox select {
+  padding: 6px;
 }

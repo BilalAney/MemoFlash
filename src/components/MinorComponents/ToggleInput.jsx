@@ -20,6 +20,7 @@ export default function ToggleInput({
   default_state = false,
   externalState = null,
   setExternalState = null,
+  className, //This is a modification to the original file, but it is by me, too...
   children,
 }) {
   const [isToggled, setIsToggled] = useState(default_state);
@@ -64,10 +65,11 @@ export default function ToggleInput({
     <div
       onClick={() => {
         externalState !== null
-          ? setExternalState((pre) => !pre)
+          ? setExternalState()
           : setIsToggled((pre) => !pre);
       }}
       style={wholeContainerStyles}
+      className={className}
     >
       <span>{children}</span>
       <div style={padStyles}>

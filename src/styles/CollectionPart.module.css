@@ -48,28 +48,61 @@
 }
 
 .card {
-  display: grid;
-  grid-template-rows: auto 1fr;
+  /* display: grid;
+  grid-template-rows: auto 1fr; */
+  display: flex;
+
   padding: 1.2rem;
   margin: 1rem;
-  max-width: max-content;
+  width: auto;
   height: auto;
+  max-width: max-content;
   max-height: 120px;
   background-color: var(--forth-color);
   grid-row: span 1;
   text-align: center;
-  /* overflow-x: visible;
-  overflow-y: auto; */
   position: relative;
 }
 
 .card_content {
+  position: relative;
+  background-color: transparent;
   overflow: auto;
-  height: 100%;
+  perspective: 1000px;
+  flex-grow: 1;
 }
 
 .card span {
   letter-spacing: 5px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg); /* Initially rotated to face away */
+}
+
+.cardFront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back face by default */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add some shadow */
+}
+
+.card_content:hover .cardInner {
+  transform: rotateY(180deg);
 }
 
 .optionsPane {

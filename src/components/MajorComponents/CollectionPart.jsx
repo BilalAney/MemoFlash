@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "../../styles/CollectionPart.module.css";
 import deleteIcon from "../../assets/interface_icons/delete.svg";
 import editIcon from "../../assets/interface_icons/edit_pen.svg";
-import { Outlet, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 export function CollectionPart({ children }) {
   return (
     <section className={styles.collectionPartContainer}>
@@ -48,7 +48,14 @@ export function CollectionCardsContainer({ data }) {
   return <div className={styles.cardsContainer}>{cardElements}</div>;
 }
 
-export function CollectionCard({ isKeptRevealed, keepRevealed, front, back }) {
+export function CollectionCard({
+  isKeptRevealed,
+  keepRevealed,
+  front,
+  back,
+  frontColor = "var(--third-color)",
+  backColor = "var(--second-color)",
+}) {
   const [isRevealed, setIsRevealed] = useState(isKeptRevealed);
   const [isOptionsShown, setIsOptionsShown] = useState(false);
   const navigate = useNavigate();
@@ -69,15 +76,22 @@ export function CollectionCard({ isKeptRevealed, keepRevealed, front, back }) {
           <img src={deleteIcon} onClick={() => navigate(`DeleteDialog`)} />
         </div>
       )}
+      {/**TODO:    Completet the card with the flipping effect */}
       <div className={styles.card_content}>
-        {isRevealed ? (
-          <>
+        <div className={styles.cardInner}>
+          <div
+            className={styles.cardFront}
+            style={{ backgroundColor: frontColor }}
+          >
             <span>{front}</span>
-            <p>{back}</p>
-          </>
-        ) : (
-          <span>{front}</span>
-        )}
+          </div>
+          <div
+            className={styles.cardBack}
+            style={{ backgroundColor: backColor }}
+          >
+            <span>{back}</span>
+          </div>
+        </div>
       </div>
     </div>
   );
